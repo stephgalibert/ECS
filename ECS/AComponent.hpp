@@ -6,9 +6,23 @@
 #include "Constants.hpp"
 #include "Entity.hpp"
 
-// generation d'un id de chaque component avec les templates ?
 namespace Component
 {
+	using ComponentID = int;
+
+	inline ComponentID getUniqueComponentID(void)
+	{
+		static ComponentID lastID { 0u };
+		return lastID++;
+	}
+
+	template <typename T>
+	inline ComponentID getComponentTypeID(void)
+	{
+		static ComponentID typeID { getUniqueComponentID() };
+		return typeID;
+	}
+
 	struct AComponent : public std::enable_shared_from_this<AComponent>
 	{
 		AComponent(void) { parent = nullptr; }

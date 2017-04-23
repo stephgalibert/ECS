@@ -40,31 +40,28 @@ private:
 	std::unordered_map<Entity, std::bitset<Constants::MaximumComponent> > componentsBits_;
 };
 
-// todo: remplacer le T::Index par le template magic
-
 template <typename T>
 void EntityManager::addComponent(Entity entityId, std::unique_ptr<Component::AComponent> component)
 {
-	components_[entityId][T::Index] = std::move(component);
-	componentsBits_[entityId][T::Index] = true;
+	components_[entityId][Component::getComponentTypeID<T>()] = std::move(component);
+	componentsBits_[entityId][Component::getComponentTypeID<T>()] = true;
 }
 
 template <typename T>
 void EntityManager::deleteComponent(Entity entityId)
 {
-	delete components_[entityId][T::Index];
-	components_[entityId][T::Index] = nullptr;
-	componentsBits_[entityId][T::Index] = false;
+	components_[entityId][Component::getComponentTypeID<T>()].reset();
+	componentsBits_[entityId][Component::getComponentTypeID<T>()] = false;
 }
 
 template <typename T>
 bool EntityManager::hasComponent(Entity entityId) const
 {
-	return componentsBits_.at(entityId)[T::Index];
+	return componentsBits_.at(entityId)[Component::getComponentTypeID<T>()];
 }
 
 template <typename T>
 T *EntityManager::getComponent(Entity entityId) const
 {
-	return static_cast<T *>(components_.at(entityId)[T::Index].get());
+	return static_cast<T *>(components_.at(entityId)[Component::getComponentTypeID<T>()].get());
 }

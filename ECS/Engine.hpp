@@ -15,7 +15,7 @@ public:
 	void update(float delta);
 
 	// tmp
-	void createPlayer();
+	void createPlayer(int id);
 
 private:
 	EntityManager entityManager_;

@@ -26,9 +26,8 @@ void Engine::update(float delta)
 }
 
 // tmp
-void Engine::createPlayer(void)
+void Engine::createPlayer(int id)
 {
-	int id = 1;
 	entityManager_.createEntity(id);
 
 	std::unique_ptr<Component::Render> component(new Component::Render);

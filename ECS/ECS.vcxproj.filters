@@ -31,9 +31,6 @@
     <Filter Include="Fichiers d%27en-tête\entity">
       <UniqueIdentifier>{b2025810-0bca-47a7-90e5-1769e5d84ddd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers sources\entity">
-      <UniqueIdentifier>{b2fa4e00-7f20-4d9a-b818-59191cc7acaf}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,9 +38,6 @@
     </ClCompile>
     <ClCompile Include="RenderSystem.cpp">
       <Filter>Fichiers sources\systems</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Fichiers sources\entity</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
       <Filter>Fichiers sources</Filter>

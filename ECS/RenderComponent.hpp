@@ -11,9 +11,6 @@ namespace Component
 	class Render : public AComponent
 	{
 	public:
-		static const int Index = 0;
-
-	public:
 		Render(void);
 		virtual ~Render(void);
 

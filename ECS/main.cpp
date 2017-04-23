@@ -18,8 +18,8 @@ int main(void)
 #endif
 		Engine engine;
 
-		engine.createPlayer();
-
+		engine.createPlayer(1);
+		
 		sf::RenderWindow window(sf::VideoMode(600, 600), "SFML works!");
 		sf::CircleShape shape(100.f);
 		shape.setFillColor(sf::Color::Green);
@@ -41,8 +41,6 @@ int main(void)
 			window.draw(shape);
 			window.display();*/
 		}
-
-		//delete player;
 
 #ifdef _DEBUG
 	}
