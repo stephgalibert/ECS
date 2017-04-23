@@ -13,5 +13,69 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\components">
+      <UniqueIdentifier>{9a0a2283-4b49-452f-a700-cdfa1b56b53a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\systems">
+      <UniqueIdentifier>{8bcbb30e-19b0-48f5-8f2a-63b774ed617f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\utils">
+      <UniqueIdentifier>{2589ba2e-7f90-4555-bba8-3c5e2a883f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\components">
+      <UniqueIdentifier>{92057d7a-c852-4b86-81e8-798960e3b015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\systems">
+      <UniqueIdentifier>{9124e2f0-6a86-4169-ac17-f214074a8a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\entity">
+      <UniqueIdentifier>{b2025810-0bca-47a7-90e5-1769e5d84ddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\entity">
+      <UniqueIdentifier>{b2fa4e00-7f20-4d9a-b818-59191cc7acaf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderSystem.cpp">
+      <Filter>Fichiers sources\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Fichiers sources\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderComponent.cpp">
+      <Filter>Fichiers sources\components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Constants.hpp">
+      <Filter>Fichiers d%27en-tête\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem.hpp">
+      <Filter>Fichiers d%27en-tête\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.hpp">
+      <Filter>Fichiers d%27en-tête\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AComponent.hpp">
+      <Filter>Fichiers d%27en-tête\components</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderComponent.hpp">
+      <Filter>Fichiers d%27en-tête\components</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
